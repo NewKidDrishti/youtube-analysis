@@ -13,6 +13,7 @@ This project analyzes daily trending YouTube video data from the US to uncover p
 * **Channel Performance:** Deep dive into top-performing channels.
 * **Time Series Trends:** Daily and hourly patterns of trending videos.
 * **Machine Learning:** A classifier to predict videos with high engagement based on features.
+* **Interactive Visualizations:** Many plots are generated using Plotly Express, offering interactive features for deeper exploration.
 
 ## Dataset
 
@@ -25,13 +26,18 @@ The analysis uses daily trending YouTube video data from the **United States**.
 
 ## Tools & Technologies
 
-* Python
-* Pandas (Data Manipulation)
-* NumPy (Numerical Operations)
-* Matplotlib, Seaborn, Plotly (Visualizations)
-* WordCloud (Text Analysis)
-* Scikit-learn (Machine Learning)
-* Jupyter Notebook
+This project uses Python and the following libraries:
+
+* **pandas:** For data manipulation and analysis.
+* **numpy:** For numerical operations.
+* **matplotlib:** For static visualizations.
+* **seaborn:** For enhanced statistical data visualizations.
+* **plotly:** For interactive visualizations.
+* **wordcloud:** For generating word clouds.
+* **scikit-learn:** For machine learning tasks (preprocessing, model training, evaluation).
+* **collections** (built-in Python module)
+* **re** (built-in Python module for regular expressions)
+* **Jupyter Notebook:** The environment where the analysis and code are presented.
 
 ## How to Run the Analysis
 
@@ -41,11 +47,21 @@ The analysis uses daily trending YouTube video data from the **United States**.
     cd [Your_GitHub_Repo_Name]
     ```
 2.  **Install Libraries:**
+    It's recommended to create a virtual environment first:
     ```bash
-    pip install pandas numpy matplotlib seaborn plotly scikit-learn wordcloud jupyter
+    # Optional: Create a virtual environment
+    # conda create -n youtube_env python=3.9
+    # conda activate youtube_env
+    # Or: python -m venv youtube_env
+    #     source youtube_env/bin/activate # macOS/Linux
+    #     youtube_env\Scripts\activate # Windows
+    ```
+    Then, install the necessary packages:
+    ```bash
+    pip install pandas numpy matplotlib seaborn plotly wordcloud scikit-learn
     ```
 3.  **Launch Jupyter Notebook:**
-    Ensure `Youtube_Analysis_Drishti.ipynb`, `USvideos.csv`, and `US_category_id.json` are in the same folder.
+    Ensure `Youtube_Analysis_drishti.ipynb`, `USvideos.csv`, and `US_category_id.json` are in the same folder.
     ```bash
     jupyter notebook
     ```
