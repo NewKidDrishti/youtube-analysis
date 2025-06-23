@@ -17,9 +17,9 @@ This project analyzes daily trending YouTube video data from the US to uncover p
 
 ## Dataset
 
-The analysis uses daily trending YouTube video data from the **United States**.
+The analysis uses daily trending YouTube video data from the **United States**, sourced from Kaggle.
 
-**Included Files:**
+**Included Files (if downloaded locally):**
 * `Youtube_Analysis_drishti.ipynb`: The main Jupyter Notebook with all code and analysis.
 * `USvideos.csv`: The primary dataset of trending videos.
 * `US_category_id.json`: Maps YouTube category IDs to names.
@@ -35,6 +35,7 @@ This project uses Python and the following libraries:
 * **plotly:** For interactive visualizations.
 * **wordcloud:** For generating word clouds.
 * **scikit-learn:** For machine learning tasks (preprocessing, model training, evaluation).
+* **kagglehub:** For downloading datasets directly from Kaggle.
 * **collections** (built-in Python module)
 * **re** (built-in Python module for regular expressions)
 * **Jupyter Notebook:** The environment where the analysis and code are presented.
@@ -58,14 +59,26 @@ This project uses Python and the following libraries:
     ```
     Then, install the necessary packages:
     ```bash
-    pip install pandas numpy matplotlib seaborn plotly wordcloud scikit-learn
+    pip install pandas numpy matplotlib seaborn plotly wordcloud scikit-learn kagglehub
     ```
-3.  **Launch Jupyter Notebook:**
+3.  **Acquire Data:**
+    If you don't have the `USvideos.csv` and `US_category_id.json` files locally, you can download them using `kagglehub`. **Note:** You will need to have your Kaggle API credentials set up for this to work (usually `kaggle.json` in `~/.kaggle/`).
+    ```python
+    import kagglehub
+
+    # Download latest version of the 'youtube-new' dataset
+    # This will download the files to a local directory (e.g., ~/.kaggle/datasets/datasnaek/youtube-new/...)
+    path = kagglehub.dataset_download("datasnaek/youtube-new")
+
+    print("Path to dataset files:", path)
+    ```
+    Alternatively, you can manually download `USvideos.csv` and `US_category_id.json` from the [Kaggle YouTube New Trending Videos dataset page](https://www.kaggle.com/datasets/datasnaek/youtube-new) and place them in your project folder.
+4.  **Launch Jupyter Notebook:**
     Ensure `Youtube_Analysis_drishti.ipynb`, `USvideos.csv`, and `US_category_id.json` are in the same folder.
     ```bash
     jupyter notebook
     ```
-4.  **Run the Notebook:** Open `Youtube_Analysis_drishti.ipynb` and execute all cells sequentially (`Cell > Run All`).
+5.  **Run the Notebook:** Open `Youtube_Analysis_drishti.ipynb` and execute all cells sequentially (`Cell > Run All`).
 
 ## Key Insights
 
